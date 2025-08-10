@@ -1,7 +1,7 @@
-function WhyChooseUs(){
+export default function WhyChooseUs(){
     return(
-        <div>NEGA BIZNI TANLASHADI</div>
+        <section id="home" className="h-screen bg-white flex items-center justify-center">
+            <h2 className="font-nico text-4xl">NEGA BIZNI TANLASHADI</h2>
+        </section>
     )
 }
-
-export default WhyChooseUs
