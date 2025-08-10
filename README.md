@@ -1,1 +1,1 @@
-Omotenashi Academy
+# Omotenashi Academy
