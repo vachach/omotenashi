@@ -1,12 +1,21 @@
 export default function SamuraiSection() {
   return (
-    <section id="home" className="h-screen bg-black flex items-center justify-center">
-      <img 
-        src="Sun.png" 
-        alt="Sun" 
-        className="absolute top-center left-0 z-1"
+    <section
+      id="home"
+      className="relative h-screen bg-black flex items-center justify-center"
+      style={{
+        backgroundImage: 'url("Samurai.png")',
+        backgroundSize: 'cover',
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      <img
+        src="logo/Logo White 915.svg"
+        alt="Logo"
+        className="relative z-10"
       />
-      <h1 className="font-nico text-6xl text-white z-10">OMOTENASHI ACADEMY</h1>
     </section>
   );
 }
