@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer.jsx';
 
 export default function App() {
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <Header />
       <SamuraiSection />
       <AboutUs />
@@ -16,6 +16,6 @@ export default function App() {
       <Articles />
       <Contacts />
       <Footer />
-    </>
+    </div>
   )
 }

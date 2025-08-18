@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="font-nico bg-gray-100 h-[435px] flex items-center justify-center flex-col gap-4">
+    <footer className="font-nico bg-gray-300 h-[435px] flex items-center justify-between flex-col p-4 max-w-6xl mx-auto">
       <p>LOGO</p>
       <div className="flex flex-col items-center gap-2">
         <p>Bizni ushbu ijtimoiy tarmoqlarda kuzatishingiz mumkin.</p>
