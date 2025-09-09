@@ -22,7 +22,7 @@ export default function Header() {
       <div className="flex justify-between items-center p-4 max-w-6xl mx-auto">
         {/* Logo */}
         <div className="text-red-600">
-          <a href="#home"><img src="logo/Logo White 40.svg" alt="Logo" className="h-20 w-20\"/></a>
+          <a href="#home"><img src="logo/Logo White 40.svg" alt="Logo" className="h-20 w-20"/></a>
         </div>
 
         {/* Desktop Menu */}

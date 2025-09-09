@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'nico': ['Nico Moji', 'sans-serif'],
+        'ubuntu': ['Ubuntu', 'sans-serif'],
       },
     },
   },
