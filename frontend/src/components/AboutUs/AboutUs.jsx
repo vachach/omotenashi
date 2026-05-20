@@ -1,51 +1,63 @@
+import { CheckCircle2 } from "lucide-react";
+
+const cultureItems = [
+  { src: "about/Kenshi.png", label: "Intizom" },
+  { src: "about/Kabuto.png", label: "Himoya" },
+  { src: "about/Hasu.png", label: "Sabr" },
+  { src: "about/Geisha.png", label: "Madaniyat" },
+  { src: "about/Origami.png", label: "Aniqlik" },
+  { src: "about/Tsuru.png", label: "Maqsad" },
+];
+
 export default function AboutUs() {
   return (
-    <section
-      id="about"
-      className="relative min-h-screen bg-white flex flex-col lg:flex-row items-center justify-between px-10 py-20"
-    >
-      {/* Title & Text */}
-      <div className="max-w-xl">
-        <h2 className="font-nico text-4xl mb-6">BIZ HAQIMIZDA</h2>
-        <p className="font-ubuntu text-gray-700 leading-relaxed">
-          Biz sizga N1 va N2 sertifikatiga ega, malakali o‘qituvchilar bilan
-          ta’lim olish imkoniyatini taqdim etamiz. Dunyoning istalgan
-          nuqtasidan, o‘zingizga qulay vaqtda online darslarni davom
-          ettirishingiz mumkin. O‘qituvchilarimiz orasida Yaponiyada o‘z
-          karyerasini muvaffaqiyatli davom ettirayotgan mutaxassislar ham, uzoq
-          yillardan beri yuzlab talabalarga ta’lim berib kelayotgan tajribali
-          ustozlar ham bor.
-        </p>
-      </div>
+    <section id="about" className="relative overflow-hidden bg-white px-5 py-24 sm:py-28 lg:px-8">
+      <img src="Torii.png" alt="" className="absolute -right-8 top-20 hidden h-80 opacity-10 lg:block" />
+      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.92fr_1.08fr]">
+        <div>
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#d62626]">
+            Biz haqimizda
+          </p>
+          <h2 className="break-words font-nico text-3xl leading-tight text-[#141414] sm:text-5xl">
+            Til, madaniyat va maqsad bir joyda
+          </h2>
+          <p className="mt-7 text-base leading-7 text-[#4e4e4e] sm:text-lg sm:leading-8">
+            Omotenashi Academy yapon tilini o'quvchining real maqsadiga bog'lab
+            o'rgatadi: JLPT sertifikati, Yaponiyada o'qish, ish intervyusi yoki
+            kundalik muloqot. Darslar online, ammo jarayon shaxsiy nazorat va
+            muntazam feedback bilan olib boriladi.
+          </p>
 
-      {/* Right Side Torii */}
-      <div className="absolute right-16 top-20">
-        <img src="Torii.png" alt="Torii" width={180} height={400} />
-      </div>
+          <div className="mt-8 space-y-4">
+            {[
+              "N1 va N2 darajadagi tajribali o'qituvchilar",
+              "Kichik guruhlar va individual progress tracking",
+              "Kanji, grammatika, speaking va listening uchun alohida bloklar",
+            ].map((item) => (
+              <div key={item} className="flex gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 flex-none text-[#d62626]" />
+                <p className="text-base leading-7 text-[#3a3a3a]">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-      {/* Images Section */}
-      <div className="mt-16 lg:mt-28 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-        <div className="bg-black rounded-xl flex items-center justify-center p-6">
-          <img src="about/Kenshi.png" alt="Kenshi" className="object-contain" />
-        </div>
-        <div className="bg-black rounded-xl flex items-center justify-center p-6">
-          <img src="about/Kabuto.png" alt="Kabuto" className="object-contain" />
-        </div>
-        <div className="bg-black rounded-xl flex items-center justify-center p-6">
-          <img src="about/Hasu.png" alt="Hasu" className="object-contain" />
-        </div>
-        <div className="bg-black rounded-xl flex items-center justify-center p-6">
-          <img src="about/Geisha.png" alt="Geisha" className="object-contain" />
-        </div>
-        <div className="bg-black rounded-xl flex items-center justify-center p-6">
-          <img
-            src="about/Origami.png"
-            alt="Origami"
-            className="object-contain"
-          />
-        </div>
-        <div className="bg-black rounded-xl flex items-center justify-center p-6">
-          <img src="about/Tsuru.png" alt="Tsuru" className="object-contain" />
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {cultureItems.map((item, index) => (
+            <div
+              key={item.label}
+              className={`group rounded-lg border border-black/10 bg-[#111] p-5 shadow-xl shadow-black/10 transition hover:-translate-y-1 ${
+                index % 2 === 0 ? "sm:translate-y-6" : ""
+              }`}
+            >
+              <div className="flex aspect-square items-center justify-center">
+                <img src={item.src} alt="" className="max-h-28 object-contain transition group-hover:scale-105" />
+              </div>
+              <p className="mt-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-white/70 sm:tracking-[0.22em]">
+                {item.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
